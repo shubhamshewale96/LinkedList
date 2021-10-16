@@ -47,10 +47,17 @@ public class MyLinkedList {
             this.tail = myNode;
         }
 	}
+	//Insert in between
 	public void insert(INode myNode,INode newNode) {
 		// TODO Auto-generated method stub
 		INode tempNode = myNode.getNext();
         myNode.setNext(newNode);
         newNode.setNext(tempNode);
 	}
+	//delete
+	public INode pop(){
+        INode tempNode = this.head;
+        this.head = head.getNext();
+        return tempNode;
+    }
 }
